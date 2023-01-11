@@ -547,7 +547,7 @@ def _extract_nuisance_param_dict(weight_groups: list, systematics_name: str, sys
         nuisance_param_definition_parts = []
 
         # Parse scale variations we need to find
-        scale_factors = systematic.value.split(",")
+        scale_factors = systematic.value.split(b",")
         scale_factors = [float(sf) for sf in scale_factors]
 
         if len(scale_factors) == 0:
